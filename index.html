@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tempero da Terra | Sabor e Tradição | Faça seu Pedido</title>
+<meta name="description" content="Tempero da Terra: pratos caseiros, porções e bebidas no Sítio Represa, São Paulo. Veja nosso cardápio e faça seu pedido no WhatsApp. Seg a Sáb, 11h15 às 15h.">
+<meta name="theme-color" content="#12100E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/img/logo.jpg">
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="topbar" id="topo">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#topo" aria-label="Tempero da Terra - início">
+      <img class="brand-logo" src="assets/img/logo.jpg" alt="Logo Tempero da Terra" width="44" height="44">
+      <span class="brand-text"><strong>Tempero da Terra</strong><small>Restaurante • Sítio Represa</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#promocoes">Início</a>
+      <a href="#chef">Seleção do Chef</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#unidade">Unidade</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="top-actions">
+      <span class="status-pill" id="openStatus"><i></i><span>—</span></span>
+      <a class="btn btn-ghost hide-mobile" href="tel:+5511957046499">(11) 95704-6499</a>
+      <a class="btn btn-primary" href="https://wa.me/5511957046499?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Tempero%20da%20Terra." target="_blank" rel="noopener">Peça agora</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="nav-mobile" id="navMobile" aria-label="Menu móvel">
+    <a href="#promocoes">Início</a>
+    <a href="#chef">Seleção do Chef</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#menu">Categorias</a>
+    <a href="#unidade">Unidade</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+    <a class="btn btn-primary" href="https://wa.me/5511957046499?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Tempero%20da%20Terra." target="_blank" rel="noopener">Peça agora no WhatsApp</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="promocoes">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">01 — Sítio Represa, São Paulo</span>
+      <h1>Sabor e tradição servidos à mesa <em>desde o fogão caseiro</em>.</h1>
+      <p class="lead">Pratos feitos na hora, porções generosas e aquele tempero de casa. Monte seu pedido no cardápio e finalize no WhatsApp em um clique — pedido mínimo de R$ 12.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="#cardapio">Ver cardápio</a>
+        <a class="btn btn-outline btn-lg" href="https://wa.me/5511957046499?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Tempero%20da%20Terra." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+      </div>
+      <ul class="hero-meta">
+        <li><strong>70+</strong><span>itens no cardápio</span></li>
+        <li><strong>R$ 12</strong><span>pedido mínimo</span></li>
+        <li><strong>Pix • Cartão</strong><span>pagamento fácil</span></li>
+      </ul>
+    </div>
+    <div class="hero-cards" id="heroCards"><!-- preenchido via JS --></div>
+  </div>
+</section>
+
+<!-- RIBBON -->
+<div class="ribbon" id="ribbon" aria-hidden="true">
+  <div class="ribbon-track" id="ribbonTrack">
+    <span>Delivery &amp; retirada</span><b>•</b><span>Seg a Sáb · 11h15 às 15h</span><b>•</b><span>Pix, crédito e débito</span><b>•</b><span>Pedido mínimo R$ 12</span><b>•</b><span>Pratos feitos na hora</span><b>•</b>
+  </div>
+</div>
+
+<!-- SELEÇÃO DO CHEF -->
+<section class="section" id="chef">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">02 — Nossas promoções</span>
+        <h2>Seleção do Chef</h2>
+        <p>Pratos exclusivos, preparados com ingredientes frescos para uma refeição prática e cheia de sabor.</p>
+      </div>
+      <a class="btn btn-outline" href="#cardapio">Ver cardápio completo</a>
+    </div>
+    <div class="cards reveal" id="chefCards"></div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="band band-dark">
+  <div class="wrap band-grid">
+    <div class="reveal">
+      <span class="eyebrow light">03 — Delivery</span>
+      <h2>Tempero da Terra no conforto da sua casa!</h2>
+      <p>Quando o sabor de casa precisa chegar até você, nosso delivery leva os mesmos pratos, o mesmo cuidado e a mesma qualidade. Monte seu pedido pelo cardápio e finalize no WhatsApp.</p>
+      <a class="btn btn-accent btn-lg" href="https://wa.me/5511957046499?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Tempero%20da%20Terra." target="_blank" rel="noopener">Peça agora</a>
+    </div>
+    <div class="band-card reveal">
+      <h3>Como pedir</h3>
+      <ol>
+        <li>Escolha os itens no cardápio abaixo</li>
+        <li>Adicione ao pedido (carrinho)</li>
+        <li>Envie tudo no WhatsApp com um clique</li>
+      </ol>
+      <p class="muted">Entrega e retirada no local • Taxa a combinar por bairro</p>
+    </div>
+  </div>
+</section>
+
+<!-- SALÃO / RETIRADA -->
+<section class="section" id="experiencia">
+  <div class="wrap split">
+    <div class="split-photo reveal" role="img" aria-label="Salão do restaurante Tempero da Terra"></div>
+    <div class="reveal">
+      <span class="eyebrow">04 — No bairro</span>
+      <h2>Viva a experiência do Tempero da Terra no Sítio Represa</h2>
+      <p>Um ambiente simples e acolhedor, atendimento atencioso e os pratos clássicos da cozinha caseira. Passe por aqui e sinta o sabor da tradição servida à mesa — estamos prontos para te receber.</p>
+      <div class="inline-ctas">
+        <a class="btn btn-primary" href="#unidade">Como chegar</a>
+        <a class="btn btn-outline" href="https://www.flashmenu.app/tempero-da-terra/produtos" target="_blank" rel="noopener">Cardápio original</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE NOSSO MENU -->
+<section class="section section-alt" id="menu">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">05 — Categorias</span>
+        <h2>Explore nosso menu</h2>
+      </div>
+    </div>
+    <div class="menu-grid reveal" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- CARDÁPIO COMPLETO -->
+<section class="section" id="cardapio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">06 — Cardápio</span>
+        <h2>Cardápio completo</h2>
+        <p>Dados sincronizados com o cardápio oficial do restaurante. Busque, filtre por categoria e adicione ao pedido.</p>
+      </div>
+    </div>
+    <div class="toolbar">
+      <label class="search"><span class="ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      </span><input id="searchInput" type="search" placeholder="Buscar pratos, porções, bebidas..." autocomplete="off"></label>
+      <div class="filters" id="filters" role="tablist" aria-label="Filtrar por categoria"></div>
+    </div>
+    <p class="result-count" id="resultCount"></p>
+    <div id="menuList"></div>
+  </div>
+</section>
+
+<!-- UNIDADE -->
+<section class="section section-alt" id="unidade">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">07 — Onde estamos</span>
+        <h2>Unidade que atende a sua região</h2>
+      </div>
+    </div>
+    <div class="unit-grid">
+      <article class="unit-card reveal">
+        <span class="unit-tag">Retirada + Delivery</span>
+        <h3>Sítio Represa — São Paulo/SP</h3>
+        <p>Avenida Doutora Nise da Silveira, 2461<br>Sítio Represa • CEP 04894-020</p>
+        <p><strong>Seg a Sáb, das 11h15 às 15h</strong><br>Domingo fechado</p>
+        <p><strong>Telefone / WhatsApp</strong><br><a href="https://wa.me/5511957046499" target="_blank" rel="noopener">(11) 95704-6499</a></p>
+        <p><strong>Pedido mínimo:</strong> R$ 12,00 • <strong>Pagamento:</strong> Pix (CNPJ 39.932.039/0001-82), crédito, débito e dinheiro</p>
+        <div class="inline-ctas">
+          <a class="btn btn-primary" href="https://wa.me/5511957046499?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Tempero%20da%20Terra." target="_blank" rel="noopener">Pedir agora</a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Avenida+Doutora+Nise+da+Silveira,+2461,+S%C3%A3o+Paulo" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </article>
+      <div class="unit-side">
+        <div class="info-card reveal">
+          <h3>Entrega</h3>
+          <p>Taxa de entrega a combinar por bairro. Chame no WhatsApp informando seu endereço para confirmar valor e tempo.</p>
+        </div>
+        <div class="info-card reveal">
+          <img src="assets/img/retirada.jpg" alt="Pratos do restaurante" loading="lazy">
+          <h3>Retirada no local</h3>
+          <p>Prefere buscar? Faça o pedido pelo WhatsApp e retire no balcão, sem espera.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">08 — Nossa história</span>
+      <h2>Conheça o Tempero da Terra</h2>
+      <p>O Tempero da Terra está presente no dia a dia de quem busca refeição saborosa, caseira e com preço justo. Do frango cozido com batata à costela com mandioca, do contra-filé acebolado à feijoada de sábado: a receita do sucesso está nos detalhes e no atendimento de excelência.</p>
+      <h3>Uma experiência caseira</h3>
+      <p>Mais do que refeições, oferecemos comida de verdade — arroz soltinho, feijão temperado, farofa, macarrão e salada fresca — servida com carinho no salão, na marmita ou no delivery.</p>
+    </div>
+    <div class="about-cards reveal">
+      <div class="about-card"><strong>Pratos</strong><span>executivos completos</span></div>
+      <div class="about-card"><strong>Porções</strong><span>para compartilhar</span></div>
+      <div class="about-card"><strong>Adicionais</strong><span>caldos e misturas</span></div>
+      <div class="about-card"><strong>Bebidas</strong><span>geladas e sucos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTAQUE -->
+<section class="band band-accent">
+  <div class="wrap band-grid">
+    <div class="reveal">
+      <span class="eyebrow">09 — Nosso destaque</span>
+      <h2>Costela bovina com mandioca: o carro-chefe!</h2>
+      <img class="band-photo" src="assets/img/pratos/costela.jpg" alt="Costela assada suculenta" loading="lazy">
+      <p>Carne macia e suculenta, acompanhada de arroz, feijão, farofa, macarrão e salada. Receita de família que garante sabor exclusivo.</p>
+      <button class="btn btn-dark btn-lg" data-add="ntC9nKA201sU6J81B1xQ" data-price>Adicionar</button>
+    </div>
+    <div class="band-card light reveal">
+      <img class="band-photo" src="assets/img/pratos/bife-parmegiana.jpg" alt="Bife à parmegiana com molho de tomate, arroz e batata frita" loading="lazy">
+      <h3>Bife contra-filé à parmegiana</h3>
+      <p>Na chapa com molho de tomate, batata frita, arroz, feijão e salada. O queridinho do almoço.</p>
+      <button class="btn btn-primary" data-add="Rh8KmKc3zwQqsKXR23dZ">Adicionar ao pedido</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section" id="contato">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">10 — Fale conosco</span>
+      <h2>Faça seu pedido ou tire dúvidas</h2>
+      <p>Tem alguma dúvida ou sugestão? Preencha ao lado e envie direto no nosso WhatsApp. Estamos prontos para atendê-lo e garantir a melhor experiência.</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511957046499" target="_blank" rel="noopener">(11) 95704-6499</a></p>
+      <p class="muted">Seg a Sáb, 11h15 às 15h • Av. Doutora Nise da Silveira, 2461 — Sítio Represa, São Paulo/SP</p>
+    </div>
+    <form class="form reveal" id="contactForm">
+      <label>Nome<input name="nome" required placeholder="Seu nome"></label>
+      <label>Telefone<input name="telefone" placeholder="(11) 90000-0000"></label>
+      <label>Mensagem<textarea name="mensagem" rows="4" required placeholder="Quero fazer um pedido / tirar uma dúvida..."></textarea></label>
+      <button class="btn btn-primary btn-lg" type="submit">Enviar no WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="footer-logo" src="assets/img/logo.jpg" alt="Logo Tempero da Terra" width="88" height="88">
+      <p><strong>Tempero da Terra</strong><br>Sabor e tradição servidos à mesa. Comida caseira no Sítio Represa ou no conforto da sua casa.</p>
+    </div>
+    <div>
+      <h4>Unidade</h4>
+      <p>Av. Doutora Nise da Silveira, 2461<br>Sítio Represa — São Paulo/SP<br>Seg a Sáb · 11h15 às 15h</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <p><a href="#promocoes">Início</a><br><a href="#chef">Seleção do Chef</a><br><a href="#cardapio">Cardápio</a><br><a href="#unidade">Unidade</a><br><a href="tel:+5511957046499">Tel: (11) 95704-6499</a></p>
+    </div>
+  </div>
+  <p class="copy">© 2026 Tempero da Terra. Todos os direitos reservados. • Fotos: galetos.com.br, Receiteria, Aurora, Dolly, Campari Group, Amazon, Wikimedia Commons e Open Food Facts (CC BY-SA / domínio público)</p>
+</footer>
+
+<!-- CARRINHO -->
+<button class="cart-fab" id="cartFab" aria-label="Abrir pedido">Pedido <span id="cartCount">0</span> • <span id="cartTotal">R$ 0,00</span></button>
+<div class="cart-modal" id="cartModal" aria-hidden="true">
+  <div class="cart-box" role="dialog" aria-label="Seu pedido">
+    <div class="cart-head"><h3>Seu pedido</h3><button id="cartClose" aria-label="Fechar">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <label class="cart-note">Observação<textarea id="orderNote" rows="2" placeholder="Ex.: sem cebola, troco para R$ 50..."></textarea></label>
+    <p class="cart-total">Total: <strong id="cartModalTotal">R$ 0,00</strong></p>
+    <p class="muted small">Pedido mínimo R$ 12,00 • Pagamento: Pix, crédito, débito ou dinheiro.</p>
+    <button class="btn btn-primary btn-lg" id="sendOrder">Enviar pedido no WhatsApp</button>
+  </div>
+</div>
+
+<a class="wa-float" href="https://wa.me/5511957046499?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Tempero%20da%20Terra." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.05-.99.23-3.34-.69-2.82-1.11-4.6-3.94-4.74-4.13-.14-.19-1.12-1.49-1.12-2.84 0-1.35.71-2.01.96-2.29.25-.27.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.07.63.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.27.72 1.18 1.54 1.91 1.06.94 1.95 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.27.37-.23.62-.14.25.09 1.6.76 1.87.9.27.14.45.21.52.32.07.12.07.66-.17 1.34z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<button class="to-top" id="toTop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

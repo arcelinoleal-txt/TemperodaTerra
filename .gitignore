@@ -1,0 +1,18 @@
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+
+# Node (esse site nao usa, mas caso algem rode)
+node_modules/
+package-lock.json
+
+# Extras
+*.zip
+*.ps1
+*.bat
